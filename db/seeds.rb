@@ -11,7 +11,7 @@ puts "Created Dishoom"
 Restaurant.create!(name: "Pizza East",
   address: "56A Shoreditch High St, London E1 6PQ",
   phone_number: "555-554-5454",
-  category: "italian"
+  category: "-"
 )
 puts "Created Pizza East"
 

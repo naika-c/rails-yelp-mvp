@@ -3,5 +3,13 @@
 <p><%= @restaurant.phone_number %></p>
 <p><%= @restaurant.category %></p>
 
-<%= link_to "Go Back", restaurants_path %>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item">Rating: <%= review.rating %> stars  Review: <%= review.content %></li>
+  <% end %>
+</ul>
+<br>
+
+<%= link_to "Add review", new_restaurant_review_path(@restaurant) %>
 <%= link_to "Add a new restaurant", new_restaurant_path %>
+<%= link_to "Go Back", restaurants_path %>
